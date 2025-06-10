@@ -50,7 +50,7 @@ def search_contact(keyword):
     for contact in results:
         print(f"{contact['name']} - {contact['phone']}")
 
-#
+#메뉴 
 def menu():
     while True:
         print("\n1. 추가 | 2. 수정 | 3. 삭제 | 4. 목록 | 5. 검색 | 0. 종료")
@@ -77,3 +77,7 @@ def menu():
             break
         else:
             print("잘못된 입력입니다.")
+
+#실행행
+if __name__ == "__main__":
+    menu()
