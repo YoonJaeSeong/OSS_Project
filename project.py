@@ -78,6 +78,6 @@ def menu():
         else:
             print("잘못된 입력입니다.")
 
-#실행행
+#실행
 if __name__ == "__main__":
     menu()
