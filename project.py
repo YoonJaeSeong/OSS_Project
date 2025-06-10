@@ -1,3 +1,6 @@
+import os
+import json
+CONTACT_FILE = "contacts.json"
 
 #파일 입출력
 def load_contacts():
