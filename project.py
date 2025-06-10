@@ -1,5 +1,5 @@
 
-#파일 입출력력
+#파일 입출력
 def load_contacts():
     if not os.path.exists(CONTACT_FILE):
         return []
@@ -16,3 +16,9 @@ def add_contact(name, phone):
     contacts.append({"name": name, "phone": phone})
     save_contacts(contacts)
 
+
+#연락처 목록
+def list_contacts():
+    contacts = load_contacts()
+    for i, contact in enumerate(contacts, 1):
+        print(f"{i}. {contact['name']} - {contact['phone']}")
