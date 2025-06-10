@@ -39,3 +39,10 @@ def edit_contact(old_name, new_name, new_phone):
             contact['phone'] = new_phone
             break
     save_contacts(contacts)
+
+#연락처 검색
+def search_contact(keyword):
+    contacts = load_contacts()
+    results = [c for c in contacts if keyword.lower() in c['name'].lower()]
+    for contact in results:
+        print(f"{contact['name']} - {contact['phone']}")
