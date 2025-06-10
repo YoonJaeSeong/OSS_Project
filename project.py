@@ -22,3 +22,9 @@ def list_contacts():
     contacts = load_contacts()
     for i, contact in enumerate(contacts, 1):
         print(f"{i}. {contact['name']} - {contact['phone']}")
+
+#연락처 삭제제
+def delete_contact(name):
+    contacts = load_contacts()
+    contacts = [c for c in contacts if c['name'] != name]
+    save_contacts(contacts)
