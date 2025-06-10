@@ -23,8 +23,19 @@ def list_contacts():
     for i, contact in enumerate(contacts, 1):
         print(f"{i}. {contact['name']} - {contact['phone']}")
 
-#연락처 삭제제
+#연락처 삭제
 def delete_contact(name):
     contacts = load_contacts()
     contacts = [c for c in contacts if c['name'] != name]
+    save_contacts(contacts)
+
+
+#연락처 수정
+def edit_contact(old_name, new_name, new_phone):
+    contacts = load_contacts()
+    for contact in contacts:
+        if contact['name'] == old_name:
+            contact['name'] = new_name
+            contact['phone'] = new_phone
+            break
     save_contacts(contacts)
